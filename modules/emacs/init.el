@@ -1,10 +1,12 @@
 (load "~/.emacs.d/emacs-c-ide-demo/init.el")
 
+;; emacs-c-ide configuration disables menu bar, let's reenable it here
+(menu-bar-mode 1)
+
 (require 'package)
 
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(package-initialize)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
