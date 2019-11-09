@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/mnt/builder/work/devel/imgcmp/src/.git'
+let g:netrw_dirhist_2='/home/x0194612/.vim'
+let g:netrw_dirhist_3='/mnt/builder/work/devel/adbwrapper'
+let g:netrw_dirhist_4='/etc/mercurial'
