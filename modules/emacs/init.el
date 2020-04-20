@@ -15,6 +15,7 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
+ '(c-basic-offset 4)
  '(custom-enabled-themes (quote (misterioso)))
  '(package-check-signature nil)
  '(package-selected-packages
