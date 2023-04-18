@@ -9,15 +9,19 @@ function load_config() {
 
 
 function load_modules() {
-    ls ${MLE_MODULES_PATH} | while read module; do
-        eval enabled="\${$module}"
-        [ ${enabled} -eq 1 ] && {
-             shellrc=${MLE_MODULES_PATH}/${module}/shellrc
-             if [ -s ${shellrc} ]; then
-                 source ${shellrc}
-             fi
-        }
+    cd ${MLE_MODULES_PATH} > /dev/null
+    for module in *; do
+        if [ -v ${module} ]; then
+            eval enabled="\${$module}"
+            [ ${enabled} -eq 1 ] && {
+                shellrc=${MLE_MODULES_PATH}/${module}/shellrc
+                if [ -s ${shellrc} ]; then
+                    source ${shellrc}
+                fi
+            }
+        fi
     done
+    cd -
 }
 
 load_config
