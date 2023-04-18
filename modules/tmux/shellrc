@@ -1,1 +1,3 @@
-[ -z "${TMUX}" ] && tmux new-session \; split-window -h \;
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+    tmux >/dev/null 2>&1
+fi
